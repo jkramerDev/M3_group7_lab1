@@ -1,22 +1,21 @@
 package tree;
 
 public interface OrgChart {
+	
+	// If there is no orgchart, start it
 	public void addRoot(Employee e); 
-		// if there is no orgchart, start it
 	
-	
+	// Get rid of the org chart
 	public void clear();
-		// get rid of the org chart
-	
+		
+	// Add the newPerson as a direct report (child) of manager
 	public void addDirectReport(Employee manager, Employee newPerson);
-		// add the newPerson as a direct report (child) of manager
 	
+	// Remove the employee, give their direct reports to their supervisor
 	public void removeEmployee(Employee firedPerson);
-		// remove the employee, give their direct reports to their supervisor
-	
+		
 	public void showOrgChartDepthFirst(); 
 	
 	public void showOrgChartBreadthFirst();
 	
-
 }

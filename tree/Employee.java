@@ -50,7 +50,6 @@ public class Employee implements Comparable<Employee> {
 		return name + " " + id + " " + position;
 	}
 	
-	//
 	public int compareTo(Employee o) {
 		
 		return (this.id).compareTo(o.id);

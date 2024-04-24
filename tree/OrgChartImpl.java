@@ -147,10 +147,12 @@ public class OrgChartImpl implements OrgChart{
 		}
 	}
 	
+	// Method used to get proper output to display DFS after removing Todd 
 	private void sortChildren(List<GenericTreeNode<Employee>> children) {
 		Collections.sort(children, new Comparator<GenericTreeNode<Employee>>() {
 			@Override
 			public int compare(GenericTreeNode<Employee> node1, GenericTreeNode<Employee> node2) {
+				// Sort based on Employee ID
 				return node1.data.getId().compareTo(node2.data.getId());
 			}
 		});

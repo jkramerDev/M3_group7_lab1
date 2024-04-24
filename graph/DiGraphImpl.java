@@ -154,7 +154,7 @@ public class DiGraphImpl implements DiGraph{
 				return fromNode.getDistanceToNeighbor(neighbor);
 			}
 		}
-		// Otherwise, return false
+		// Otherwise, return null
 		return null;
 	}
 
@@ -315,7 +315,7 @@ public class DiGraphImpl implements DiGraph{
 		GraphNode targetFromNode = getNode(fromNode.getValue());
 		GraphNode targetToNode = getNode(toNode.getValue());
 		
-		// Initalize distances for all nodes
+		// Initialise distances for all nodes
 		Map<GraphNode, Integer> distances = new HashMap<>();
 		
 		for (GraphNode node : nodeList) {
